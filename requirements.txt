@@ -1,0 +1,8 @@
+pymupdf4llm
+qdrant-client
+llama-index
+llama-index-llms-groq
+llama-index-vector-stores-qdrant
+llama-index-embeddings-openai
+python-dotenv
+streamlit
