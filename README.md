@@ -61,6 +61,16 @@ Install the required Python packages using the `requirements.txt` file.
 pip install -r requirements.txt
 ```
 
+```bash
+uv add -r requirements.txt
+```
+
+#### OR ONLY
+
+```bash
+uv sync
+```
+
 ### 4. Set Up Environment Variables
 
 Create a `.env` file in the root of the project by copying the example file:
