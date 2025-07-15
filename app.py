@@ -36,6 +36,14 @@ def main():
                     for node in response.source_nodes:
                         st.write(f"- **{node.metadata.get('file_name', 'Unknown') }** (Score: {node.score:.2f})")
 
+                    st.markdown("### Retrieved Raw Data")
+                    for i, node in enumerate(response.source_nodes):
+                        with st.expander(f"Source {i+1}: {node.metadata.get('file_name', 'Unknown')} (Score: {node.score:.2f})"):
+                            node_dict = node.dict()
+                            # The 'embedding' field is removed for better readability
+                            node_dict["node"].pop("embedding", None)
+                            st.json(node_dict)
+
                 except Exception as e:
                     st.error(f"An error occurred while querying: {e}")
         else:
